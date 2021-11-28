@@ -1,0 +1,46 @@
+import java.util.*;
+public class CarObjectSomething
+  
+{
+  
+  public static void main(String[]args) 
+  {
+    Scanner input = new Scanner(System .in);
+    
+    CarObject car1 =new CarObject("Corrolla", "Toyota", 2013, 13000.00, true);
+    CarObject car2 =new CarObject("Wrangler", "Jeep", 2018, 30000.00, true);
+    CarObject car3 =new CarObject("Tucson", "Hyundai", 2018, 14044.00, false);
+  
+ 
+CarObject[ ] carList = new CarObject[5];
+carList[0] = car1;
+carList[1] = car2;
+carList[2] = car3;
+
+for (int i= 0; i < carList.length; i++)
+{
+System.out.println(carList[0].getModel( ));
+System.out.println(carList[0].getManufacturer( ));
+System.out.println(carList[0].getYear( ));
+System.out.println(carList[0].getPrice( ));
+System.out.println(carList[0].getHasAC( ));
+System.out.println("");
+}
+
+System.out.println("Select a car:");
+int selection = input.nextInt();
+System.out.println("How much ya got?");
+double money = input.nextDouble();
+if (money >= carList[selection-1].getPrice ()) ;
+{
+System.out.println("Congrats!");
+
+money = money - carList[selection-1].getPrice( ); 
+System.out.println(" Your change is " + money);
+}
+
+else 
+{
+System.out.println("You do not have enough money sorry");
+}
+}}}
